@@ -1,7 +1,6 @@
-//var restify = require('restify');
-import restify from 'restify';
-//const axios = require('axios').default;
-import axios from 'axios';
+var restify = require('restify');
+require('restify').plugins;
+const axios = require('axios').default;
 
 axios.defaults.baseURL = 'http://localhost:8080/api/v1';
 
@@ -15,6 +14,9 @@ function getSessions(req, res, next: any) {
         .then(function(response) {
             res.send(response.data);
             next();
+        })
+        .catch(function (error) {
+            console.log(error);
         });
 }
 
@@ -23,6 +25,9 @@ function getSingleSession(req, res, next: any) {
         .then(function(response) {
             res.send(response.data);
             next();
+        })
+        .catch(function (error) {
+            console.log(error);
         });
 }
 
@@ -31,6 +36,9 @@ function getSpeakers(req, res, next: any) {
         .then(function(response) {
             res.send(response.data);
             next();
+        })
+        .catch(function (error) {
+            console.log(error);
         });
 }
 
@@ -39,6 +47,9 @@ function getSingleSpeaker(req, res, next: any) {
         .then(function(response) {
             res.send(response.data);
             next();
+        })
+        .catch(function (error) {
+            console.log(error);
         });
 }
 
