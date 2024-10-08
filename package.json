@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/node": "^13.7.1",
     "@types/restify": "^8.4.2",
-    "axios": "^1.6.0",
+    "axios": "^1.7.4",
     "restify": "^11.1.0",
     "restify-errors": "^8.0.2"
   }
